@@ -37,7 +37,7 @@ const StudyMaterial = () => {
       localStorage.getItem("token")
 
     const res = await fetch(
-      "${API_URL}/ask-ai",
+      `${API_URL}/ask-ai`,
       {
         method: "POST",
 

@@ -17,7 +17,7 @@ function Home() {
   }, [])
 
   useEffect(() => {
-    fetch("${API_URL}/")
+    fetch(`${API_URL}/`)
       .then(res => res.text())
       .then(data => console.log(data))
   }, [])

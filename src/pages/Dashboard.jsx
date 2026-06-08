@@ -19,7 +19,7 @@ function Dashboard() {
 
     if (!title.trim()) return
 
-    const res = await fetch("${API_URL}/notes", {
+    const res = await fetch(`${API_URL}/notes`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -103,7 +103,7 @@ function Dashboard() {
     formData.append("pdf", pdf)
 
     const res = await fetch(
-      "${API_URL}/upload",
+      `${API_URL}/upload`,
       {
         method: "POST",
         headers: {
@@ -143,7 +143,7 @@ if (res.ok) {
 
   }
   useEffect(() => {
-    fetch("${API_URL}/notes", {
+    fetch(`${API_URL}/notes`, {
       headers: {
         Authorization: token
       }
