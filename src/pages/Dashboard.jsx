@@ -1,3 +1,4 @@
+import API_URL from "../config";
 import { useNavigate } from "react-router-dom"
 import "./Dashboard.css"
 import { useEffect, useState } from "react"
@@ -18,7 +19,7 @@ function Dashboard() {
 
     if (!title.trim()) return
 
-    const res = await fetch("http://localhost:5000/notes", {
+    const res = await fetch("${API_URL}/notes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -43,14 +44,14 @@ function Dashboard() {
   const deleteNote = async (id) => {
 
     const res = await fetch(
-      `http://localhost:5000/notes/${id}`,
-      {
-        method: "DELETE",
-        headers: {
-          Authorization: token
-        }
-      }
-    )
+  `${API_URL}/notes/${id}`,
+  {
+    method: "DELETE",
+    headers: {
+      Authorization: token
+    }
+  }
+)
 
     if (res.ok) {
 
@@ -64,7 +65,7 @@ function Dashboard() {
   const editNote = async (id) => {
 
     const res = await fetch(
-      `http://localhost:5000/notes/${id}`,
+      `${API_URL}/notes/${id}`,
       {
         method: "PUT",
         headers: {
@@ -102,7 +103,7 @@ function Dashboard() {
     formData.append("pdf", pdf)
 
     const res = await fetch(
-      "http://localhost:5000/upload",
+      "${API_URL}/upload",
       {
         method: "POST",
         headers: {
@@ -142,7 +143,7 @@ if (res.ok) {
 
   }
   useEffect(() => {
-    fetch("http://localhost:5000/notes", {
+    fetch("${API_URL}/notes", {
       headers: {
         Authorization: token
       }

@@ -1,3 +1,4 @@
+import API_URL from "../config";
 import "./Dashboard.css"
 import { useState } from "react"
 
@@ -36,7 +37,7 @@ const StudyMaterial = () => {
       localStorage.getItem("token")
 
     const res = await fetch(
-      "http://localhost:5000/ask-ai",
+      "${API_URL}/ask-ai",
       {
         method: "POST",
 

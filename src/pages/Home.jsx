@@ -1,3 +1,4 @@
+import API_URL from "../config";
 import { Link } from "react-router-dom"
 import { useEffect } from "react"
 
@@ -16,7 +17,7 @@ function Home() {
   }, [])
 
   useEffect(() => {
-    fetch("http://localhost:5000/")
+    fetch("${API_URL}/")
       .then(res => res.text())
       .then(data => console.log(data))
   }, [])
