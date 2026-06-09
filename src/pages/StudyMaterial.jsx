@@ -2,6 +2,8 @@ import API_URL from "../config";
 import "./Dashboard.css"
 import { useState } from "react"
 
+const API_URL = "https://ai-study-assistant-cjek.onrender.com"
+
 const StudyMaterial = () => {
 
   const summary =
