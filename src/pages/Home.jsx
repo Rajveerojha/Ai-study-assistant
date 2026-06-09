@@ -2,7 +2,7 @@ import API_URL from "../config";
 import { Link } from "react-router-dom"
 import { useEffect } from "react"
 
-const API_URL = "https://ai-study-assistant-cjek.onrender.com"
+
 
 function Home() {
   const user = JSON.parse(localStorage.getItem("user"))

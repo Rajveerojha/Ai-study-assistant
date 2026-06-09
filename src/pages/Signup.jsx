@@ -3,7 +3,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { FaEye, FaEyeSlash } from "react-icons/fa"
 
-const API_URL = "https://ai-study-assistant-cjek.onrender.com"
+
 
 function Signup() {
   const [email, setEmail] = useState("")

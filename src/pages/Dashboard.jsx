@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import "./Dashboard.css"
 import { useEffect, useState } from "react"
 
-const API_URL = "https://ai-study-assistant-cjek.onrender.com"
+
 
 function Dashboard() {
   const user = JSON.parse(localStorage.getItem("user") || "null")
