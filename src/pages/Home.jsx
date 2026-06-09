@@ -54,11 +54,21 @@ window.location.reload()
 
   </div>
 ) : (
-  <Link to="/login">
-    <button className="bg-blue-500 px-4 py-2 rounded">
-      Login
-    </button>
-  </Link>
+   <div className="flex gap-4">
+
+    <Link to="/login">
+      <button className="bg-blue-500 px-4 py-2 rounded">
+        Login
+      </button>
+    </Link>
+
+    <Link to="/signup">
+      <button className="bg-green-500 px-4 py-2 rounded">
+        Sign Up
+      </button>
+    </Link>
+
+  </div>
 )}
 
       </nav>
