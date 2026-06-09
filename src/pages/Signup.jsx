@@ -51,7 +51,7 @@ function Signup() {
 
         </div>
 
-        <form className="space-y-5">
+        <form onSubmit={handleSignup} className="space-y-5">
 
           <div>
             <label className="block text-gray-300 mb-2">
@@ -102,7 +102,8 @@ function Signup() {
 
           </div>
 
-          <button onClick={handleSignup}
+          <button 
+           type="submit"
             className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transition duration-300 py-3 rounded-xl text-white font-semibold hover:scale-[1.02] shadow-lg shadow-blue-500/20"
           >
             Sign Up
