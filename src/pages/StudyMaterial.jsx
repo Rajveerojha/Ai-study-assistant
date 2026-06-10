@@ -35,6 +35,9 @@ const StudyMaterial = () => {
     const pdfText =
       localStorage.getItem("pdfText")
 
+    
+    const shortText = pdfText.slice(0, 12000)  
+
     const token =
       localStorage.getItem("token")
 
@@ -54,7 +57,7 @@ const StudyMaterial = () => {
 
           question,
 
-          pdfText
+          spdfText: shortText
 
         })
 
